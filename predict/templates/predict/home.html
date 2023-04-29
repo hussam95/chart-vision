@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1 class="text-center my-4">Welcome to the Chart Pattern Prediction App!</h1>
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-6">
+      <p class="lead">
+        This web application predicts the candle-stick chart pattern for a given image input.
+        It uses computer vision to analyze the input image and generates a prediction based on
+        the patterns the model has learnt during the training process. Currently, the model is
+        trained to classify seven different chart patterns.
+      </p>
+    </div>
+    <div class="col-md-6">
+      <img src="{% static 'img/grade2-three-inside.png' %}" alt="Price Action" class="img-fluid">
+    </div>
+  </div>
+  <div class="text-center mt-4">
+    <a href="{% url 'predict-patterns' %}" class="btn btn-primary">Predict Chart Pattern</a>
+  </div>
+</div>
+{% endblock %}

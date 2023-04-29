@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Predict
+{% endblock %}
+
+{% block content %}
+  <div class="container mt-3">
+    <div class="card">
+      <div class="card-header">
+        Upload an Image to Predict Chart Pattern
+      </div>
+      <div class="card-body">
+        <form action="{% url 'predict-patterns' %}" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="image">Choose an image:</label>
+            <input type="file" class="form-control-file" id="image" name="image">
+          </div>
+          <button type="submit" class="btn btn-primary predict-btn mx-auto d-block">Predict Chart Pattern</button>
+        </form>
+      </div>
+    </div>
+
+    {% if prediction %}
+    <div class="card mt-3">
+      <div class="card-header">
+        Predicted Chart Pattern
+      </div>
+      <div class="card-body">
+        <p id="prediction">{{ prediction }}</p>
+      </div>
+    </div>
+    {% endif %}
+
+    {% if message %}
+    <div class="alert alert-danger mt-3" role="alert">{{ message }}</div>
+    {% endif %}
+
+    {% if uploaded_image_url %}
+    <div class="card mt-3">
+      <div class="card-header">
+        Uploaded Image
+      </div>
+      <div class="card-body">
+        <img src="{{ uploaded_image_url }}" alt="Uploaded Image" style="max-width:100%;">
+      </div>
+    </div>
+    {% endif %}
+  </div>
+  <style>
+    .predict-btn {
+      margin: 0 auto;
+      display: block;
+    }
+  </style>
+{% endblock %}
