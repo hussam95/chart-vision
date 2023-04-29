@@ -39,13 +39,15 @@ To use the application, follow these steps:
 
 1. Make sure you update the `model_utils.py` of `predict` django-app. You can load your own model from this file into your app.
 
-2. Run the django server
+2. Make sure to have a media directory at the root of django project. This will handle file uploads.
 
-3. Upload an image using the form on the home page.
+3. Run the django server
 
-4. Wait for the application to predict the class of the image.
+4. Upload an image using the form on the home page.
 
-5. View the predicted class on the results page.
+5. Wait for the application to predict the class of the image.
+
+6. View the predicted class on the results page.
 
 
 # Acknowledgments
