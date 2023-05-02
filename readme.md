@@ -1,5 +1,7 @@
 # Chart Vision App
-This is a simple Django web application that allows users to upload an image and predicts the class of the image using a pre-trained machine learning/ CV model. The price action of finanical securities often form informing patterns. Traders often use these patterns to predict the future price movement. It is hence very valueable to have an automatic system that can detect these chart patterns. The model trained for this app achieves an accuracy of 82% on prediciting seven different chart patterns.
+This is a simple Django web application that allows users to upload an image and predicts the class of the image using a pre-trained machine learning/ CV model. The price action of finanical securities often form informing patterns. Traders often use these patterns to predict the future price movement. It is hence very valueable to have an automatic system that can detect these chart patterns. The model trained for this app achieves an accuracy of 82% on prediciting seven different chart patterns. These chart patterns include Breakout Pattern, DB, DT, Final Flag, TR, Wedge Bottom and Wedge Top patterns. 
+
+**You can view the hosted app [here](https://hussam94.pythonanywhere.com/).**
 
 # Prerequisites
 To run this application, you need the following software installed on your system:
